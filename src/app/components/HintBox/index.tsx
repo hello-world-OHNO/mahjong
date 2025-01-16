@@ -15,10 +15,10 @@ const HintBox: React.FC<HintBoxProps> = ({ text }) => {
         borderRadius: "8px",
         textAlign: "left",
         maxWidth: "400px",
-        opacity: 0, // 初期状態で非表示
+        opacity: 0,
         animation: "fadeIn 3s ease-out",
-        animationDelay: "1s", // 2秒間の遅延を設定
-        animationFillMode: "forwards", // アニメーション終了後に最終状態を保持
+        animationDelay: "1s",
+        animationFillMode: "forwards",
       }}
     >
       <Typography
