@@ -47,8 +47,10 @@ const ResultPage = () => {
           description = "親：1200 子：600";
         } else if (fu === 60) {
           baseScore = 2000;
+          description = "親：1000 子：500";
         } else if (fu === 50) {
           baseScore = 1600;
+          description = "親：800 子：400";
         } else if (fu === 40) {
           baseScore = 1300;
           description = "親：700 子：400";
@@ -83,6 +85,8 @@ const ResultPage = () => {
           description = `${allPoints}オール`;
         } else if (fu === 20) {
           baseScore = 2100;
+          const allPoints = baseScore / 3;
+          description = `${allPoints}オール`;
         }
       } else {
         if (fu === 70) {
@@ -93,13 +97,16 @@ const ResultPage = () => {
           description = "親：2000 子：1000";
         } else if (fu === 50) {
           baseScore = 3200;
+          description = "1600 子：800";
         } else if (fu === 40) {
           baseScore = 2600;
           description = "親：1300 子：700";
         } else if (fu === 30) {
           baseScore = 2000;
+          description = "親：1000 子：500";
         } else if (fu === 25) {
           baseScore = 1600;
+          description = "親：800 子：400";
         } else if (fu === 20) {
           baseScore = 1500;
           description = "親：700 子：400";
@@ -134,10 +141,13 @@ const ResultPage = () => {
       } else {
         if (fu >= 60) {
           baseScore = 8000;
+          description = "親：4000 子：2000";
         } else if (fu === 50) {
           baseScore = 6400;
+          description = "親：3200 子：1600";
         } else if (fu === 40) {
           baseScore = 5200;
+          description = "親：2600 子：1300";
         } else if (fu === 30) {
           baseScore = 3900;
           description = "親：2000 子：1000";
