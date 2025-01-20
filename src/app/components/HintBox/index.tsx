@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Box, Typography } from "@mui/material";
 
 interface HintBoxProps {
-  text: string;
+  text: ReactNode; // ReactNode を使用してタグを受け取れるように変更
 }
 
 const HintBox: React.FC<HintBoxProps> = ({ text }) => {
@@ -37,7 +37,7 @@ const HintBox: React.FC<HintBoxProps> = ({ text }) => {
           lineHeight: 1.5,
         }}
       >
-        {text}
+        {text} {/* 外部からタグ付きの内容を渡せる */}
       </Typography>
     </Box>
   );

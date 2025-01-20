@@ -402,19 +402,35 @@ const HomePage = () => {
               </Button>
             ))}
           </Box>
-          {/* 現在の選択を表示 */}
-          {selectedYaku && (
-            <Typography
-              sx={{
-                marginTop: 2,
-                color: "#ffd700",
-                fontWeight: "bold",
-                animation: "fadeIn 0.5s ease-out",
-              }}
-            >
-              現在の選択: {selectedYaku}
-            </Typography>
-          )}
+          <HintBox
+            text={
+              <>
+                <a
+                  href="http://mjall.jp/t0001/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#ffd700",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                    transition: "transform 0.3s ease, text-shadow 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.3)"; // 浮き上がる効果
+                    e.currentTarget.style.textShadow =
+                      "0px 4px 6px rgba(0, 0, 0, 0.3)"; // 影を追加
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)"; // 元に戻す
+                    e.currentTarget.style.textShadow = "none"; // 影を削除
+                  }}
+                >
+                  役一覧
+                </a>{" "}
+                を確認できます。
+              </>
+            }
+          />
         </>
       )}
 
